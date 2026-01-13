@@ -1,4 +1,7 @@
-﻿namespace lararbedomd_uppgift_1.cs
+﻿using System;
+using System.Threading;
+
+namespace lararbedomd_uppgift_1
 {
     internal class Program
     {
@@ -19,6 +22,8 @@
             // Menyn körs i en while-loop tills användaren väljer att avsluta
             while (running)
             {
+                Console.Clear(); // Förfina
+
                 ShowMenu();
 
                 // Läser in användarens menyval från metoden och konverterar till int
@@ -29,9 +34,11 @@
                 {
                     case 1:
                         EnterNameAndAge();
+                        Paus();
                         break;
                     case 2:
                         ShowYearWhenTurning100();
+                        Paus();
                         break;
                     case 3:
                         EndProgram();
@@ -67,7 +74,7 @@
             Console.Write("\nEnter name: ");
             name = Console.ReadLine();
 
-            Console.Write("\nEnter age: ");
+            Console.Write("Enter age: ");
             age = int.Parse(Console.ReadLine());
         }
 
@@ -100,5 +107,14 @@
             Console.WriteLine("Programmet avslutas . . .");
             Thread.Sleep(1000); // Paus så använfaren kan läsa meddelande
         }
+
+
+        // Metod 4: 
+        static void Paus()
+        {
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+        }
     }
 }
+
