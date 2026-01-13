@@ -28,6 +28,7 @@
                 switch (choice)
                 {
                     case 1:
+                        EnterNameAndAge();
                         break;
                     case 2:
                         break;
@@ -45,7 +46,7 @@
 
 
 
-        // Alla metoder
+        // Alla Metoder
         static void ShowMenu()
         {
             Console.WriteLine("1. Enter your name and age");
@@ -53,6 +54,18 @@
             Console.WriteLine("3. Exit");
 
             Console.Write("\nYour choice: "); 
+        }
+
+
+
+        // Metod 1
+        static void EnterNameAndAge()
+        {
+            Console.Write("\nEnter name: ");
+            name = Console.ReadLine();
+
+            Console.Write("\nEnter age: ");
+            age = int.Parse(Console.ReadLine());
         }
     }
 }
