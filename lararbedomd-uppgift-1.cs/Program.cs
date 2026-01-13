@@ -34,8 +34,7 @@
                         ShowYearWhenTurning100();
                         break;
                     case 3:
-                        Console.WriteLine("Programmet avslutas . . .");
-                        Thread.Sleep(1000); // Paus så använfaren kan läsa meddelande
+                        EndProgram();
                         running = false;
                         break;
                     default:
@@ -92,6 +91,14 @@
             // Skriver ut resultatet
             Console.WriteLine($"{name}, you will turn 100 in the year {yearTurning100}.");
 
+        }
+
+
+        // Metod 3
+        static void EndProgram()
+        {
+            Console.WriteLine("Programmet avslutas . . .");
+            Thread.Sleep(1000); // Paus så använfaren kan läsa meddelande
         }
     }
 }
