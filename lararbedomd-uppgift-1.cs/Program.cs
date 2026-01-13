@@ -21,6 +21,22 @@
             {
                 ShowMenu();
 
+                // Läser in användarens menyval från metoden och konverterar till int
+                int choice = int.Parse(Console.ReadLine());
+
+                // Switch meny      
+                switch (choice)
+                {
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    default:
+                        break;
+                                          
+                }
             }
         }
 
@@ -35,6 +51,8 @@
             Console.WriteLine("1. Enter your name and age");
             Console.WriteLine("2. Show when you will turn 100");
             Console.WriteLine("3. Exit");
+
+            Console.Write("\nYour choice: "); 
         }
     }
 }
