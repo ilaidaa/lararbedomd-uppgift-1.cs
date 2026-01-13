@@ -34,8 +34,12 @@
                         ShowYearWhenTurning100();
                         break;
                     case 3:
+                        Console.WriteLine("Programmet avslutas . . .");
+                        Thread.Sleep(1000); // Paus så använfaren kan läsa meddelande
+                        running = false;
                         break;
                     default:
+                        Console.WriteLine("Ogiltig inmatning.");
                         break;
 
                 }
