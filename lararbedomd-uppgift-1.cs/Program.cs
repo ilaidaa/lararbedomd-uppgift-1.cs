@@ -31,12 +31,13 @@
                         EnterNameAndAge();
                         break;
                     case 2:
+                        ShowYearWhenTurning100();
                         break;
                     case 3:
                         break;
                     default:
                         break;
-                                          
+
                 }
             }
         }
@@ -53,9 +54,8 @@
             Console.WriteLine("2. Show when you will turn 100");
             Console.WriteLine("3. Exit");
 
-            Console.Write("\nYour choice: "); 
+            Console.Write("\nYour choice: ");
         }
-
 
 
         // Metod 1
@@ -66,6 +66,28 @@
 
             Console.Write("\nEnter age: ");
             age = int.Parse(Console.ReadLine());
+        }
+
+
+        // Metod 2
+        static void ShowYearWhenTurning100()
+        {
+            // Kontrollerar att användaren har matat in namn och ålder
+            if (name == "" || age == 0)
+            {
+                Console.WriteLine("You must enter name and age first.");
+                return;
+            }
+
+            // Hämtar nuvarande år
+            int currentYear = DateTime.Now.Year;
+
+            // Räknar ut året då användaren fyller 100
+            int yearTurning100 = currentYear + (100 - age);
+
+            // Skriver ut resultatet
+            Console.WriteLine($"{name}, you will turn 100 in the year {yearTurning100}.");
+
         }
     }
 }
